@@ -8,7 +8,7 @@ public class Main {
         manager.loadFromFile();  // 啟動時從檔案讀取紀錄
 
         while (true) {
-            System.out.println("1.新增 2.查看 3.總額 4.分類查詢 5.時間分析 6.離開");
+            System.out.println("1.新增 2.查看 3.總額 4.分類查詢 5.時間分析 6.刪除紀錄 7.離開");
             
             if (!scanner.hasNextInt()) {
                 System.out.println("請輸入有效的選項");
@@ -170,6 +170,23 @@ public class Main {
 
             
                 case 6:
+                    manager.showAll();  // 顯示所有紀錄以供選擇刪除
+
+                    System.out.println("輸入要刪除的紀錄編號: ");
+                    
+                    if(!scanner.hasNextInt()) {
+                        System.out.println("請輸入有效的編號");
+                        scanner.next();  // 清除無效輸入
+                        break;
+                    }
+
+                    int deleteIndex = scanner.nextInt();
+                    scanner.nextLine();  // 清除換行符
+
+                    manager.deleteTransaction(deleteIndex - 1);  // 刪除選定的紀錄
+                    break;
+
+                case 7:
                     manager.saveToFile();  // 離開前儲存紀錄到檔案
                     System.out.println("離開程式");
                     return;

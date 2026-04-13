@@ -2,5 +2,5 @@
 2026-04-10,income,,11700.0,3§Î¿\∂O
 2026-04-12,expense,food,210.0,±ﬂ¿\
 2026-04-12,expense,food,105.0,©@∞ÿ
-2026-04-11,expense,food,240.0,§»¿\
 2026-04-12,expense,transport,200.0,¿x≠»
+2026-04-12,expense,food,250.0,§»¿\

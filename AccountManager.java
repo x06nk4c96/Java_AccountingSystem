@@ -30,8 +30,18 @@ class AccountManager {
 
     //顯示所有紀錄
     public void showAll() {
-        for (Transaction t : list) {
-            System.out.println(t);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println((i+1) + ". " + list.get(i).toString());
+        }
+    }
+
+    //刪除紀錄
+    public void deleteTransaction(int index) {
+        if (index >=0 && index < list.size()) {
+            list.remove(index);
+            System.out.println("紀錄已刪除!");
+        } else {
+            System.out.println("無效的編號!");
         }
     }
 
